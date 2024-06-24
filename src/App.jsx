@@ -9,6 +9,8 @@ function App() {
     const altura = parseFloat(document.getElementById('altura').value);
     const resultado = document.getElementById('resultado');
 
+    resultado.classList.add('aparecerResult');
+
     if (altura <= 0 || peso <= 0 || isNaN(peso) || isNaN(altura)) {
       setClassificacao('Insira valores válidos.');
       resultado.style.color = "black";
@@ -32,7 +34,6 @@ function App() {
     }
   }
 
-
   return (
     <>
       <section>
@@ -48,7 +49,7 @@ function App() {
           </div>
           <button onClick={calcularIMC} className='btn btn-primary mt-4'>Enviar</button>
 
-          <div className='mt-4' id='resultado'>{classificacao}</div>
+          <div className='resultado mt-3' id='resultado'>{classificacao}</div>
         </div>
       </section>
     </>

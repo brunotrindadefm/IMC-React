@@ -14,5 +14,11 @@ body,html {
 }
 
 #resultado {
+  display: none;
+  font-weight: bold;
   font-size: 25px;
+}
+
+#resultado.aparecerResult {
+  display: block;
 }
